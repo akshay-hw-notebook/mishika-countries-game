@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><head><link rel="icon" href="data:,"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mishika's World Explorer — Countries</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@ svg.map.has-target .country.discovered:not(.target){fill:#a7e8bd;opacity:.8}
 .stamp-slam{display:inline-block;max-width:94%;overflow-wrap:break-word;background:#fff;border:4px solid var(--magenta);outline:2px dashed var(--magenta);outline-offset:-9px;color:var(--magenta);border-radius:10px;padding:12px 18px;font-family:Fredoka,Nunito,sans-serif;font-weight:700;letter-spacing:.5px;font-size:clamp(19px,3.6vw,32px);line-height:1.15;transform:rotate(-6deg);animation:slam .5s ease-out;box-shadow:0 3px 0 rgba(20,33,61,.25)}
 @keyframes slam{0%{transform:rotate(-6deg) scale(2.2);opacity:0}70%{transform:rotate(-6deg) scale(.92);opacity:1}100%{transform:rotate(-6deg) scale(1)}}
 .curiosity{text-align:center;overflow:hidden}.curiosity p{line-height:1.35}
-.flagbox svg{width:min(260px,70vw);height:auto}
+.flagbox svg{width:min(260px,70vw);height:auto}@media (max-height:760px){.flagbox svg{width:min(200px,70vw)}}
 .topbtns{position:absolute;right:10px;top:10px;display:flex;gap:8px}
 @media(max-width:900px){header{padding-top:10px}.topbtns{position:static;justify-content:center;margin-top:8px;flex-wrap:wrap}h1{font-size:clamp(24px,4.5vw,36px)}}
 .hud{border-bottom:3px dashed #b9c9d4;padding-bottom:8px}
