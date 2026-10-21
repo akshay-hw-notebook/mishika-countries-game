@@ -135,7 +135,10 @@ svg.map.has-target .country.discovered:not(.target){fill:#a7e8bd;opacity:.8}
 <p><button class="secondary" id="grownClose">Close</button></p>
 </div></div>
 
-<script>window.MISHIKA_LOG_CONFIG={endpoint:"__ENDPOINT__",token:"__TOKEN__",game:"countries"};</script>
+<script>/* Live logging. Endpoint is public; the access key is NOT in this file.
+ Open the game once with #k=KEY on this device: the key is saved to localStorage and the hash is wiped. */
+(function(){var tk="";try{var m=/[#&]k=([^&]+)/.exec(location.hash);if(m){tk=decodeURIComponent(m[1]);localStorage.setItem("mishika_log_token",tk);history.replaceState(null,"",location.pathname+location.search)}else{tk=localStorage.getItem("mishika_log_token")||""}}catch(e){}
+window.MISHIKA_LOG_CONFIG={endpoint:tk?"https://script.google.com/macros/s/AKfycbwB0LO1qviBj_MJBByS6_7-C9iq1-8hsV8kT1w8IzgFVJ6yozd2eFw7MHu_gyK8MfBJog/exec":"",token:tk,game:"countries"};})();</script>
 <script>
 (function(){var C=window.MISHIKA_LOG_CONFIG||{};if(C.endpoint&&C.endpoint.indexOf("__")===0)C.endpoint="";var QK="mishika_log_queue_v1",MAX=2000,sid=Date.now().toString(36)+Math.random().toString(36).slice(2,6),asked={},tries={};
 function load(){try{return JSON.parse(localStorage.getItem(QK)||"[]")}catch(e){return[]}}function save(q){try{localStorage.setItem(QK,JSON.stringify(q.slice(-MAX)))}catch(e){}}
